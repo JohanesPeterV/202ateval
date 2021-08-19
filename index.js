@@ -8,10 +8,14 @@ function parallax(e) {
   var docs = document.getElementsByClassName("layer");
   let len = docs.length;
 
-  for (let i = 0; i < len; i++) {
-    const x = e.clientX * 0.006 * (i + 1) - 6.2 * (i + 1);
-    const y = e.clientY * 0.006 * (i + 1);
-    docs[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
+  const x = - (400 * (1));
+  docs[0].style.transform = `translateX(${x}px)`;
 
+  for (let i = 0; i < len; i++) {
+    const x = (e.clientX * 0.1 * (i + 1)) - (400 * (i + 1));
+    const y = e.clientY * 0.1 * (i + 1)- (6 );
+    docs[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
+    
   }
+
 }
